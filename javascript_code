@@ -1,17 +1,17 @@
 var findDuplicates = function(nums) {
   let duplicates = [];
   for(let i = 0; i < nums.length; i++){
-    console.log("VAlor de i : " + nums[i])
+    // console.log("VAlor de i : " + nums[i])
     const position = Math.abs(nums[i]) - 1;
-    console.log(position)
-    console.log("Num Position FUERA es::: " + nums[position]);
+    // console.log(position)
+    // console.log("Num Position FUERA es::: " + nums[position]);
     if(nums[position] < 0) {
-      console.log("Num Position vale: " + nums[position]);
+      // console.log("Num Position vale: " + nums[position]);
       duplicates.push(position + 1);
     } else {
       nums[position] = -nums[position];
     }
-   console.log("Que vale DUPLICATES:::" + duplicates);
+   // console.log("Que vale DUPLICATES:::" + duplicates);
   }
   return duplicates;
 };
